@@ -637,7 +637,82 @@ html {
   box-shadow: 0 10px 20px rgba(77, 64, 142, 0.25);
 }
 
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
 
+.contact {
+  position: relative;
+  min-height: 45vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 4rem 1.5rem;
+
+  background-color: #f2effb;
+  overflow: hidden;
+}
+
+/* خلفية القسم */
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/bg-section.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.45;
+
+  z-index: 0;
+}
+
+/* محتوى القسم فوق الخلفية */
+.contact > * {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1.2rem;
+}
+
+.contact-btn {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #4d408e;
+  background-color: #f2effb;
+
+  border: 2px solid #4d408e;
+
+  text-decoration: none;
+  margin-top: 20px;
+
+}
+
+.contact-btn:hover {
+
+  color: white;
+  background-color: #4d408e;
+}
 
 
 /* ============================================

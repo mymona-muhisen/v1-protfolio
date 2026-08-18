@@ -3,6 +3,7 @@ import CurserAnimate from './CurserAnimation.jsx';
 import Navbar from './Navbar.jsx';
 import Hero from './hero.jsx';
 import Project from './project.jsx';
+import Contact from './contact.jsx';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
           description="A personal finance platform for tracking habits, generating insights, and predicting the impact of financial decisions."
         />
       </div>
+            <Contact/>
     </>
   )
 }
