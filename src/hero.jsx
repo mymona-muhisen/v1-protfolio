@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section id="home" className="hero">
 
       <div className="text">
         <h4 className="meta">Hello i'm</h4>

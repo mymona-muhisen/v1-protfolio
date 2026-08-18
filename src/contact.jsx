@@ -4,7 +4,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 export default function Contact() {
   return (
     <section id="contact" className="contact">
-      <h2 className="meta">Let's Connect</h2>
+      <h2 className="connect">Let's Connect</h2>
 
       <div className="contact-links">
 
@@ -13,7 +13,6 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="contact-btn"
-          aria-label="GitHub"
         >
           <FontAwesomeIcon icon={faGithub} size="2x" />
         </a>
@@ -23,7 +22,6 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="contact-btn"
-          aria-label="LinkedIn"
         >
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>

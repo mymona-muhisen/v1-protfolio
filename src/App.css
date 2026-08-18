@@ -58,34 +58,29 @@ html {
 /* ============================================
    NAVBAR
    ============================================ */
-
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
   width: 100%;
 
   background-color: #f2effb;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   padding: 0.6rem 1.25rem;
 }
 
-.brand {
+.nav-content {
   display: flex;
   align-items: center;
-  text-decoration: none;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
 .logo {
   width: 90px;
-  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -93,7 +88,6 @@ html {
 .nav-links {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
   gap: 2rem;
 }
 
@@ -102,21 +96,15 @@ html {
   color: #28243A;
   font-size: 1rem;
 
-  margin: 0;
-
-  display: inline-flex;
-  align-items: center;
-
   position: relative;
 
-  transition: color 0.18s ease;
+  transition: color 0.2s ease;
 }
 
 .link::after {
   content: "";
 
   position: absolute;
-
   left: 0;
   bottom: -4px;
 
@@ -171,7 +159,7 @@ html {
   position: relative;
   z-index: 2;
 
-  width: 50%;
+  width: 100%;
   min-width: 0;
 
   display: flex;
@@ -350,6 +338,16 @@ html {
   margin-top: 0.6rem;
 }
 
+.connect {
+  color: white;
+  -webkit-text-stroke: 4px #4d408e;
+  paint-order: stroke fill;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: "Clicker Script";
+  margin: -10px;
+}
+
 .h1 {
   color: #4d408e;
   font-size: 4rem;
@@ -415,6 +413,7 @@ html {
   align-self: flex-start;
   font-weight: 600;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 
