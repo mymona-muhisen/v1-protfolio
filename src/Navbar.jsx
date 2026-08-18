@@ -1,20 +1,50 @@
-import logo from './assets/M M.svg';
+import { useState } from "react";
 
 export default function Navbar() {
-  const scrollToTop = (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
-    <div className="navbar">
-      <a className="brand" href="/" onClick={scrollToTop}>
-        <img className="logo" src={logo} alt="Mymona Muhisen logo" />
+    <nav className="navbar">
+
+      <a href="#home" className="brand" onClick={closeMenu}>
+        <img
+          src="/src/assets/M M.svg"
+          alt="Mymona Muhisen"
+          className="logo"
+        />
       </a>
-      <div className="nav-links">
-        <a className="link" href="/" onClick={scrollToTop}>home</a>
-        <a className="link" href="#projects">projects</a>
+
+      <button
+        className="menu-toggle"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation"
+        aria-expanded={menuOpen}
+      >
+        <span className={menuOpen ? "bar open" : "bar"}></span>
+        <span className={menuOpen ? "bar open" : "bar"}></span>
+        <span className={menuOpen ? "bar open" : "bar"}></span>
+      </button>
+
+      <div className={menuOpen ? "nav-links open" : "nav-links"}>
+
+        <a href="#home" className="link" onClick={closeMenu}>
+          Home
+        </a>
+
+        <a href="#projects" className="link" onClick={closeMenu}>
+          Projects
+        </a>
+
+        <a href="#contact" className="link" onClick={closeMenu}>
+          Contact
+        </a>
+
       </div>
-    </div>
+
+    </nav>
   );
 }
